@@ -67,3 +67,30 @@ console.log(productos.every(producto => producto.precio > 1000));
 //10. Verificar existencia con .includes(): Usando el array de nombres creado en el punto 4, comprobá si contiene el nombre "Campera". 
 console.log(nombresProductos.includes("Campera"));
 
+
+
+
+// Parte 4: 
+
+// 11. Ordenar con .sort(): Ordená los productos por precio de menor a mayor. Mostrá el nuevo array ordenado. 
+const productosOrdenados = productos.sort((a, b) => a.precio - b.precio);
+console.log(productosOrdenados);
+
+
+// 12. Generar mensajes personalizados con .map(): Usá .map() para crear un array de strings como este: 
+// "El producto Remera cuesta $1500 y pertenece a la categoría Ropa." Mostrá el resultado en consola. 
+const mensajesProductos = productos.map(producto => `El producto ${producto.nombre} cuesta $${producto.precio} y pertenece a la categoría ${producto.categoria}.`);
+console.log(mensajesProductos);
+
+
+//13. Agregar productos con spread:  Crear un nuevo array de objetos con más productos.  
+// Utilizar el operador spread para combinar ambos arrays de productos en un nuevo array.  Mostrar el array resultante en la consola. 
+
+const nuevosProductos = [
+    { id: 6, nombre: "Mochila", precio: 3000, categoria: "Accesorios" },
+    { id: 7, nombre: "Sandalias", precio: 4000, categoria: "Calzado" }
+];
+
+const todosProductos = [...productos, ...nuevosProductos];
+console.log(todosProductos);
+
