@@ -51,3 +51,19 @@ console.log(productosCaros);
 
 const gorraProducto = productos.find(producto => producto.nombre === "Gorra");
 console.log(gorraProducto);
+
+
+
+// Parte 3: Métodos de validación
+
+//8. Verificar con .some(): Usá .some() para comprobar si existe algún producto con un precio mayor a $10.000. Mostrá el resultado (true o false). 
+console.log(productos.some(producto => producto.precio > 10000));
+
+
+// 9. Verificar con .every(): Usá .every() para saber si todos los productos cuestan más de $1000. Mostrá el resultado. 
+console.log(productos.every(producto => producto.precio > 1000));
+
+
+//10. Verificar existencia con .includes(): Usando el array de nombres creado en el punto 4, comprobá si contiene el nombre "Campera". 
+console.log(nombresProductos.includes("Campera"));
+
